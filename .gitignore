@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Jupyter runtime
+*.ipynb~
+
+# Environment files
+.env
+.venv/
+env/
+venv/
+ENV/
+*.env
+
+# PyCharm settings
+.idea/
+
+# VS Code backup (optional if you use it too)
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter notebook outputs (optional, if you want cleaner diffs)
+*.nbconvert.ipynb
+
+# MyPy, Pytest, Coverage
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# Jupyter kernel
+*.json
+*.local/
+
+# pip wheel caches
+*.egg-info/
+dist/
+build/
+
+# huge datasets
+dataset/
+243_26053_29-pycharm-support-libs/
