@@ -1,24 +1,10 @@
-FROM nvidia/cuda:12.3.2-cudnn9-runtime-ubuntu22.04
-
+FROM tensorflow/tensorflow:2.18.0-gpu-jupyter
 WORKDIR /app
-
-# Dependências do sistema
-RUN apt -y update && \
-    apt -y install python3 python3-pip libsndfile1 build-essential cmake nodejs npm && \
-    apt -y clean && rm -rf /var/lib/apt/lists/*
-
-# Copia requirements
+RUN echo 2
 COPY requirements.txt .
-
-# Atualiza pip e instala dependências
-RUN pip3 install --upgrade pip && \
-    pip3 install -r requirements.txt && \
-    pip3 cache purge && \
-    rm requirements.txt
-
-# Instala Jupyter Lab
-RUN pip3 install jupyterlab
-
+RUN apt -y update && apt -y install libsndfile1 build-essential cmake && apt -y clean
+RUN pip install -r requirements.txt && pip cache purge
+RUN rm requirements.txt
 EXPOSE 8888
 EXPOSE 6006
 
