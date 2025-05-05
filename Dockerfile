@@ -8,4 +8,4 @@ RUN rm requirements.txt
 EXPOSE 8888
 EXPOSE 6006
 
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--no-browser"]
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--no-browser", "--debug"]
